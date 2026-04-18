@@ -7,6 +7,8 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+
+            /* 🌈 BACKGROUND FIX */
             background: linear-gradient(-45deg, #0f172a, #1e293b, #6366f1, #0ea5e9);
             background-size: 400% 400%;
             animation: bg 12s ease infinite;
@@ -22,13 +24,11 @@
         .container {
             width: 80%;
             margin: auto;
-            padding: 40px 0;
+            padding: 40px;
         }
 
         h1 {
             text-align: center;
-            font-size: 45px;
-            margin-bottom: 5px;
         }
 
         h3 {
@@ -36,43 +36,13 @@
             opacity: 0.8;
         }
 
-        .nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: white;
-            background: rgba(255,255,255,0.15);
-            padding: 10px 15px;
-            margin: 5px;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .nav a:hover {
-            background: white;
-            color: black;
-        }
-
         .card {
             background: rgba(255,255,255,0.12);
             padding: 20px;
-            margin: 25px 0;
+            margin: 20px 0;
             border-radius: 15px;
             backdrop-filter: blur(10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-
-            /* scroll animation setup */
-            opacity: 0;
-            transform: translateY(60px);
-            transition: all 0.7s ease;
-        }
-
-        .card.show {
-            opacity: 1;
-            transform: translateY(0);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
         h2 {
@@ -80,11 +50,9 @@
             padding-left: 10px;
         }
 
-        p, li {
+        p {
             color: #e5e7eb;
-            line-height: 1.6;
         }
-
     </style>
 </head>
 
@@ -95,11 +63,6 @@
     <h1>Shambhavi Kandpal</h1>
     <h3>Aspiring AI & Computer Science Student</h3>
 
-    <div class="nav">
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-    </div>
-
     <div class="card">
         <h2>About Me</h2>
         <p>I am a 12th-grade student passionate about Artificial Intelligence and Computer Science.</p>
@@ -107,35 +70,10 @@
 
     <div class="card">
         <h2>Skills</h2>
-        <ul>
-            <li>Python (Beginner)</li>
-            <li>Machine Learning Interest</li>
-            <li>HTML & CSS</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Goals</h2>
-        <p>I want to study AI and Computer Science at a top university and build impactful tech projects.</p>
+        <p>Python, HTML, Machine Learning Interest</p>
     </div>
 
 </div>
-
-<script>
-const cards = document.querySelectorAll('.card');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-});
-
-cards.forEach(card => {
-    observer.observe(card);
-});
-</script>
 
 </body>
 </html>
